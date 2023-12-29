@@ -46,16 +46,16 @@ function App() {
         {/* left section */}
         <div className='w-full h-full flex flex-col gap-2'>
           <div className='flex flex-1 flex-col w-full h-full overflow-auto'>
-            <div className='h-3/5 border-2 border-slate-400'>
+            <div className='h-3/5 border-2 border-r-[1px] border-b-[1px] border-slate-400'>
               <Input addToQueue={addToQueue}/>
             </div>
-            <div className='w-full h-full border-2 border-slate-400 overflow-auto'>
+            <div className='w-full h-full border-2 border-t-[1px] border-r-[1px] border-slate-400 overflow-auto'>
               <Display queue={queue}/>
             </div>
           </div>
         </div>
         {/* right section */}
-        <div className='w-full h-full flex flex-col flex-wrap border-2 border-slate-400'>
+        <div className='w-full h-full flex flex-col flex-wrap border-2 border-l-[1px] border-slate-400'>
           <Fetch 
             queue={queue}
             data={data}
