@@ -11,20 +11,24 @@ function App() {
 
   const [queue, setQueue] = useState([]);
   const [data, setData] = useState([]);
+  const [endClicked, setEndClicked] = useState(false);
 
   const addToQueue = (input) => {
     setQueue((prevQueue) => [...prevQueue, input]);
   };
 
+  useEffect(() => {
+    if (queue.length === 0 && endClicked) {
+      alert('Success! Queue is empty.')
+    }
+  }, [queue])
+
   const handleEndClick = () => {
+    setEndClicked(true);
     if (queue.length === 0) {
       alert('Success! Queue is empty.');
     } else {
       alert('Waiting for the queue to be empty...');
-      setTimeout(() => {
-        alert('Success! Queue is empty.');
-        setQueue([]);
-      }, +(queue.length-data.length)*1000);
     }
   }
 

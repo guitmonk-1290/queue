@@ -6,7 +6,7 @@ const Display = ({queue}) => {
             <h2 className="mb-4 font-semibold text-[18px]">Queue Contents:</h2>
             <ul className="">
                 {queue.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="rounded-xl p-2 bg-violet-700 mb-2 w-fit">{item}</li>
                 ))}
             </ul>
         </div>
