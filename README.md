@@ -1,6 +1,6 @@
 # Message Queue
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple message queue created using React.js
 
 ## Available Scripts
 
